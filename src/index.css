@@ -4,10 +4,35 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme{
-  --color-orange: #FF5733;
-  --color-teal: #008080;
-  --color-offWhite: #FDF5E6;
-  --color-gray: #36454F;
+  --color-dRed: #780000;
+  --color-lRed: #C1121F;
+  --color-offWhite: #FDF0D5;
+  --color-dBlue: #003049;
+  --color-lBlue: #669BBC;
+  --font-alex: "Alexandria", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
+}
+@layer base{
+  h1{
+    @apply  font-alex text-start text-5xl 
+  }
+  p{
+    @apply font-nunito
+  }
+  span{
+    @apply text-sm text-gray-400 font-medium
+  }
+  h3{
+    @apply font-alex text-xl
+  }
+}
+@layer components{
+  .padded{
+    @apply xl:px-20 px-4
+  }
+  .btn{
+    @apply text-white bg-dRed py-2 px-5 rounded-sm hover:cursor-pointer
+  }
 }
 
 @theme inline {
