@@ -70,11 +70,11 @@ function Home() {
         id="Hero"
         className="min-h-screen w-screen pt-5 lg:pt-10 flex padded flex-col relative "
       >
-        <div
-        className="absolute top-0 left-0 right-0 -z-10 w-full h-full bg-black/30 backdrop-blur-[5px] bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBg})` }}
-        >
+        <div className="absolute inset-0 -z-10">
+            <img src={heroBg} alt="" className="h-full w-full object-cover " />
+        <div className="absolute inset-0 bg-black/30 backdrop-blur-[5px]" />
         </div>
+
         <Navbar />
 
         <div className=" flex-1 flex flex-col justify-between text-white  pb-8 pt-20">
