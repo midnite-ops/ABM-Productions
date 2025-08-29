@@ -6,17 +6,20 @@ import {
   NavigationMenuContent,
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu"
+import { SidebarTrigger } from "./ui/sidebar"
 import logo from '../assets/clip.png'
-import { HandHelping } from "lucide-react"
+import { HandHelping, MenuIcon } from "lucide-react"
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center text-white">
+    <nav className="flex items-center text-white w-full">
         <div className="flex gap-5 items-center flex-1">
             <img src={logo} alt="ABM logo" className="w-15"/>
-            <h3 className="text-lg font-alex">ABM Productions</h3>
+            <h3 className="lg:text-lg text-sm font-alex">ABM Productions</h3>
         </div>
-        <NavigationMenu className="flex-2">
+        <SidebarTrigger className='lg:hidden' size={40}/>
+        
+        <NavigationMenu className="flex-2 hidden lg:block">
             <NavigationMenuList>
                 {/* Home (simple link) */}
                 <NavigationMenuItem>
@@ -66,8 +69,8 @@ export default function Navbar() {
                 </NavigationMenuItem>
             </NavigationMenuList>
         </NavigationMenu>
-        <div className="flex-1 text-end flex justify-end">
-            <button className="btn flex gap-2.5">
+        <div className="flex-1 text-end justify-end hidden lg:flex">
+            <button className="btn gap-2.5 flex">
                 Consult
                 <HandHelping />
             </button>
