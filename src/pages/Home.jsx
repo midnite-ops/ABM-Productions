@@ -70,13 +70,10 @@ function Home() {
         id="Hero"
         className="min-h-screen w-screen pt-5 lg:pt-10 flex padded flex-col relative "
       >
-        <div className="absolute top-0 left-0 right-0 -z-1 w-full h-full">
-          <img
-            src={heroBg}
-            alt="a woman singing"
-            className="h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/30 backdrop-blur-[5px]"></div>
+        <div
+        className="absolute top-0 left-0 right-0 -z-10 w-full h-full bg-black/30 backdrop-blur-[5px] bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroBg})` }}
+        >
         </div>
         <Navbar />
 
@@ -132,7 +129,7 @@ function Home() {
       >
         <div className="flex-1 flex flex-col gap-10">
           <div className="flex flex-col gap-5 w-[90%]">
-            <h1>Bring you Musical genius  to Life</h1>
+            <div className="font-alex text-start text-4xl lg:text-5xl">Bring your <h1 className="text-dRed inline">Musical genius</h1> to Life</div>
             <p>
               ABM Productions is a faith-based production company dedicated to
               strengthening vocal ability, building confidence, and using the

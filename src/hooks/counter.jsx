@@ -21,7 +21,7 @@ function Counter({ target }) {
   }, [inView, target, count])
 
   return (
-    <motion.h1 ref={ref}>
+    <motion.h1 ref={ref} className="text-dRed">
       {displayCount}
     </motion.h1>
   )
