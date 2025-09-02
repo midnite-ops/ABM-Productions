@@ -30,8 +30,8 @@ function Footer() {
                 <div className='flex flex-col gap-4'>
                     <h3>Contact us</h3>
                     <div>
-                        <label htmlFor="Email" className='flex gap-4 flex-col lg:flex-row mb-4'>
-                            <input type="text" placeholder='Email' className='bg-white text-black py-2 pl-3 pr-8 rounded-sm outline-none'/>
+                        <label htmlFor="Email" className='flex gap-4 flex-col md:flex-row mb-4'>
+                            <input type="text" placeholder='Email' className='bg-white text-black py-2 pl-3 pr-8 rounded-sm outline-none md:w-[50%]'/>
                             <button className='btn bg-white text-dRed'>Contact us</button>
                         </label>
                         <p className='text-sm'>Developing dynamic praises together</p>

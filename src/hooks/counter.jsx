@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { motion, useAnimation, useMotionValue, animate } from "framer-motion"
+import { motion,useMotionValue, animate } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 
 function Counter({ target }) {
@@ -22,7 +22,7 @@ function Counter({ target }) {
 
   return (
     <motion.h1 ref={ref} className="text-dRed">
-      {displayCount}
+      {displayCount}+
     </motion.h1>
   )
 }

@@ -14,7 +14,7 @@
 }
 @layer base{
   h1{
-    @apply  font-alex text-start text-4xl lg:text-5xl
+    @apply  font-alex text-start text-4xl lg:text-5xl font-bold
   }
   p{
     @apply font-nunito
