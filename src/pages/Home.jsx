@@ -98,7 +98,7 @@ function Home() {
     <div id="Home">
       <section
         id="Hero"
-        className="h-screen lg:min-h-screen md:h-[70vh]  w-screen pt-5 lg:pt-10 flex padded flex-col relative "
+        className=" hero padded relative "
       >
         <div className="absolute inset-0 -z-10">
           <img src={heroBg} alt="" className="h-full w-full object-cover " />
@@ -236,7 +236,7 @@ function Home() {
           whileInView="show"
           initial="hidden"
           viewport={{ once: true }}
-          className="grid grid-rows-4 grid-cols-1 lg:grid-rows-1 lg:grid-cols-4 gap-8 "
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 "
         >
           {services.map((item, index) => (
             <motion.div

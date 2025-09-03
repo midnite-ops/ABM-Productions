@@ -9,10 +9,13 @@ import {
 import { SidebarTrigger } from "./ui/sidebar"
 import logo from '../assets/clip.png'
 import { HandHelping, MenuIcon } from "lucide-react"
+import { useLocation } from "react-router-dom"
 
 export default function Navbar() {
+
+    const location = useLocation().pathname === '/' ? false : true
   return (
-    <nav className="flex items-center text-white w-full">
+    <nav className={`flex items-center text-white w-full ${location ? 'bg-dRed padded' : ''}`}>
         <div className="flex gap-5 items-center flex-1">
             <img src={logo} alt="ABM logo" className="w-15"/>
             <h3 className="lg:text-lg text-sm font-alex">ABM Productions</h3>
@@ -30,7 +33,7 @@ export default function Navbar() {
 
                 {/* About (simple link) */}
                 <NavigationMenuItem>
-                <NavigationMenuLink href="/about" className="px-3 py-2 text-[16px] hover:bg-transparent hover:text-white">
+                <NavigationMenuLink href="#about" className="px-3 py-2 text-[16px] hover:bg-transparent hover:text-white">
                     About
                 </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -43,7 +46,7 @@ export default function Navbar() {
                 <NavigationMenuContent className="p-4">
                     <ul className="grid gap-2 w-[200px]">
                     <li>
-                        <NavigationMenuLink href="/services/web">
+                        <NavigationMenuLink href="/Coaching">
                         Vocal Coaching
                         </NavigationMenuLink>
                     </li>
@@ -54,7 +57,7 @@ export default function Navbar() {
                     </li>
                     <li>
                         <NavigationMenuLink href="/services/design">
-                        Praise Team Revivals 
+                        Music and Media
                         </NavigationMenuLink>
                     </li>
                     </ul>
@@ -70,7 +73,7 @@ export default function Navbar() {
             </NavigationMenuList>
         </NavigationMenu>
         <div className="flex-1 text-end justify-end hidden lg:flex">
-            <button className="btn gap-2.5 flex">
+            <button className={`btn gap-2.5 flex ${location ? 'bg-white text-dRed' : ''}`}>
                 Consult
                 <HandHelping />
             </button>

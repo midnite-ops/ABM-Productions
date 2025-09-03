@@ -11,7 +11,18 @@
   --color-lBlue: #669BBC;
   --font-alex: "Alexandria", sans-serif;
   --font-nunito: "Nunito", sans-serif;
+  @keyframes infinite-scroll-left{
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(calc(-50% - 20px)); }
+  }
+  @keyframes infinite-scroll-right{
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(calc(50% - 20px)); }
+  }
+  --animate-infinite-scroll-left: infinite-scroll-left 150s linear infinite;
+  --animate-infinite-scroll-right: infinite-scroll-right 150s linear infinite;
 }
+
 @layer base{
   h1{
     @apply  font-alex text-start text-4xl lg:text-5xl font-bold
@@ -27,8 +38,23 @@
   }
 }
 @layer components{
+  .hero{
+    @apply h-screen lg:min-h-screen md:h-[70vh] w-screen pt-5 lg:pt-10 flex flex-col
+  }
+  .subtitle{
+    @apply text-center lg:w-[70%] w-full
+  }
+  .header{
+    @apply flex flex-col items-center gap-y-6
+  }
+  .container-box{
+    @apply flex flex-col gap-y-10 w-full
+  }
   .padded{
     @apply xl:px-20 px-4
+  }
+  .padded-y{
+    @apply py-28
   }
   .btn{
     @apply text-white bg-dRed py-2 px-5 rounded-sm hover:cursor-pointer
