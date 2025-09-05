@@ -9,7 +9,7 @@ import img2 from '@/assets/images/imgT-10.jpg';
 import img3 from '@/assets/images/imgT-5.jpg';
 import img4 from '@/assets/images/imgT-4.jpg';
 import img5 from '@/assets/images/imgT-14.jpg';
-import img6 from '@/assets/images/imgT-18.jpg';
+import img6 from '@/assets/images/imgT-18.JPG';
 
 import { fadeInUpBox, scaleOnHover, fadeInUp, staggerContainer } from "@/components/animations";
 function Coaching(){
