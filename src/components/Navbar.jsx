@@ -10,12 +10,14 @@ import { SidebarTrigger } from "./ui/sidebar"
 import logo from '../assets/clip.png'
 import { HandHelping, MenuIcon } from "lucide-react"
 import { useLocation } from "react-router-dom"
+import { fadeInUp } from "./animations"
+import { motion } from "framer-motion"
 
 export default function Navbar() {
 
     const location = useLocation().pathname === '/' ? false : true
   return (
-    <nav className={`flex items-center text-white w-full ${location ? 'bg-dRed padded' : ''}`}>
+    <motion.nav variants={fadeInUp} initial="hidden" viewport={{ once: true }}whileInView="show" className={`flex items-center text-white w-full ${location ? 'bg-dRed padded' : ''}`}>
         <div className="flex gap-5 items-center flex-1">
             <img src={logo} alt="ABM logo" className="w-15"/>
             <h3 className="lg:text-lg text-sm font-alex">ABM Productions</h3>
@@ -79,7 +81,7 @@ export default function Navbar() {
             </button>
         </div>
         
-    </nav>
+    </motion.nav>
     
   )
 }

@@ -3,61 +3,83 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme{
+@theme {
   --color-dRed: #780000;
-  --color-lRed: #C1121F;
-  --color-offWhite: #FDF0D5;
+  --color-lRed: #c1121f;
+  --color-offWhite: #fdf0d5;
   --color-dBlue: #003049;
-  --color-lBlue: #669BBC;
+  --color-lBlue: #669bbc;
   --font-alex: "Alexandria", sans-serif;
   --font-nunito: "Nunito", sans-serif;
-  @keyframes infinite-scroll-left{
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(calc(-50% - 20px)); }
+  @keyframes infinite-scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(calc(-50% - 20px));
+    }
   }
-  @keyframes infinite-scroll-right{
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(calc(50% - 20px)); }
+  @keyframes infinite-scroll-right {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(calc(50% - 20px));
+    }
   }
   --animate-infinite-scroll-left: infinite-scroll-left 150s linear infinite;
   --animate-infinite-scroll-right: infinite-scroll-right 150s linear infinite;
 }
 
-@layer base{
-  h1{
-    @apply  font-alex text-start text-4xl lg:text-5xl font-bold
+@layer base {
+  h1 {
+    @apply font-alex text-start font-bold text-4xl lg:text-5xl;
   }
-  p{
-    @apply font-nunito
+  p {
+    @apply font-nunito md:text-[18px];
   }
-  span{
-    @apply text-sm text-gray-400 font-medium
+  span {
+    @apply text-sm text-gray-400 font-medium;
   }
-  h3{
-    @apply font-alex text-xl
+  h3 {
+    @apply font-alex text-xl;
   }
 }
-@layer components{
-  .hero{
-    @apply h-screen lg:min-h-screen md:h-[70vh] w-screen pt-5 lg:pt-10 flex flex-col
+/* h1{
+  font-size: clamp(1.5rem, 7cqw, 3rem); 
+}
+@layer utilities {
+  .text-fluid-xs { font-size: clamp(0.7rem, 2.5cqw, 0.875rem); }
+  .text-fluid-sm { font-size: clamp(0.75rem, 3cqw, 1rem); }
+  .text-fluid-base { font-size: clamp(0.875rem, 4cqw, 1.25rem); }
+  .text-fluid-lg { font-size: clamp(1rem, 5cqw, 1.75rem); }
+  .text-fluid-xl { font-size: clamp(1.25rem, 6cqw, 2.25rem); }
+  .text-fluid-2xl { font-size: clamp(1.5rem, 7cqw, 3rem); }
+  .container-responsive {
+    container-type: inline-size;
   }
-  .subtitle{
-    @apply text-center lg:w-[70%] w-full
+} */
+@layer components {
+  .hero {
+    @apply min-h-[100dvh] md:min-h-fit xl:min-h-[100dvh]  w-screen pt-5 lg:py-10 flex flex-col;
   }
-  .header{
-    @apply flex flex-col items-center gap-y-6
+  .subtitle {
+    @apply text-center md:w-[70%]  w-full;
   }
-  .container-box{
-    @apply flex flex-col gap-y-10 w-full
+  .header {
+    @apply flex flex-col items-center gap-y-6;
   }
-  .padded{
-    @apply xl:px-20 px-4
+  .container-box {
+    @apply flex flex-col gap-y-10 w-full;
   }
-  .padded-y{
-    @apply py-28
+  .padded {
+    @apply xl:px-20 px-4;
   }
-  .btn{
-    @apply text-white bg-dRed py-2 px-5 rounded-sm hover:cursor-pointer
+  .padded-y {
+    @apply py-28;
+  }
+  .btn {
+    @apply text-white bg-dRed py-2 px-5 rounded-sm hover:cursor-pointer;
   }
 }
 
