@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar"
 import Testiomonial from "@/components/Testimonial";
-import benfitsImg from '@/assets/images/imgT-17.jpg';
+import benfitsImg from '@/assets/images/imgT-17.JPG';
 import Footer from "@/components/Footer";
 import { AudioLines, MicVocal, Shell } from "lucide-react";
 import { motion } from "framer-motion";
